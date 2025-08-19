@@ -11,7 +11,7 @@ export default defineConfig({
       manifest: {
         name: 'Al-Madina Shinwari POS',
         short_name: 'POS',
-        description: 'Modern POS for Al-Madina Restaurant',
+        description: 'Fast, offline-capable POS for Al-Madina Restaurant',
         theme_color: '#2c3e50',
         background_color: '#ffffff',
         display: 'standalone',
@@ -19,16 +19,23 @@ export default defineConfig({
           {
             src: 'logo-512x512.png',
             sizes: '192x192',
-            type: 'image/png',
+            type: 'image/png'
           },
           {
             src: 'logo-512x512.png',
             sizes: '512x512',
-            type: 'image/png',
+            type: 'image/png'
           }
         ]
       },
-      devOptions: { enabled: true }
-    }),
+      // Add dev options
+      devOptions: {
+        enabled: true
+      },
+      // Add workbox options to avoid warnings
+      workbox: {
+        globPatterns: ['**/*.{js,css,html,png,jpg,svg}']
+      }
+    })
   ],
 });
