@@ -1,17 +1,31 @@
+import { useState } from 'react';
 import { useCartSingleton } from '../hooks/useCart';
-import { printReceipt } from '../utils/printReceipt';
+import PrintReceipt from './PrintReceipt';
+import './print.css'; // ← Import print styles
 
 export default function TotalSummary() {
   const { cart, getTotal } = useCartSingleton();
   const totals = getTotal();
 
+  const [showReceipt, setShowReceipt] = useState(false);
+
   const handlePrint = () => {
     if (cart.length === 0) {
-      alert("🛒 Cart is empty!");
+      alert("🛒 Your cart is empty!");
       return;
     }
-    printReceipt(cart, totals);
+    setShowReceipt(true);
   };
+
+  if (showReceipt) {
+    return (
+      <PrintReceipt
+        cart={cart}
+        totals={totals}
+        onClose={() => setShowReceipt(false)}
+      />
+    );
+  }
 
   return (
     <div className="total-summary">
