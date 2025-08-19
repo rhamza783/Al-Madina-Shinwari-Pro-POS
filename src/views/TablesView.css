@@ -1,0 +1,29 @@
+.tables-view h2 { margin-bottom: 1rem; }
+.tables-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 0.75rem;
+}
+.table-btn {
+    padding: 1.5rem 0.5rem;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-surface);
+    color: var(--text-primary);
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: var(--transition-medium);
+}
+.table-btn:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+.table-btn.occupied {
+    background-color: var(--primary-light);
+    border-color: var(--primary);
+}
+.table-btn.active {
+    background-color: var(--primary);
+    color: white;
+    transform: scale(1.05);
+}

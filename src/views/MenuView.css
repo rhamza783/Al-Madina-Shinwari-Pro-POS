@@ -1,0 +1,35 @@
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+.menu-item-card {
+    background-color: var(--bg-surface);
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: var(--shadow-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.item-info h3 { font-size: 1rem; }
+.item-info p { font-size: 0.9rem; color: var(--text-secondary); }
+.add-btn {
+    background-color: var(--primary-light);
+    color: var(--primary);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-medium);
+}
+.add-btn:hover {
+    background-color: var(--primary);
+    color: white;
+    transform: rotate(90deg);
+}

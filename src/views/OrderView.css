@@ -1,0 +1,47 @@
+.order-view.empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: var(--text-secondary);
+}
+.order-view { display: flex; flex-direction: column; height: 100%; }
+.order-view h2 { margin-bottom: 1rem; }
+.order-items-list { flex-grow: 1; overflow-y: auto; }
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+.item-details { flex-grow: 1; }
+.item-details .item-total { font-weight: 600; float: right; }
+.quantity-controls { display: flex; align-items: center; gap: 0.75rem; }
+.quantity-controls button {
+    background: none; border: 1px solid var(--border-color);
+    width: 28px; height: 28px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; color: var(--text-secondary);
+}
+.order-summary {
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+.close-order-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--success);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+.close-order-btn:disabled {
+    background-color: var(--text-secondary);
+    cursor: not-allowed;
+}

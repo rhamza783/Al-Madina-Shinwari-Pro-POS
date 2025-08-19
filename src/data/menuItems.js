@@ -1,4 +1,3 @@
-// A simple database of menu items. In a real app, this would come from an API.
 export const menuItems = [
     { id: 1, name: 'چکن کڑاہی', category: 'karahi', price: 1800 },
     { id: 2, name: 'مٹن کڑاہی', category: 'karahi', price: 2500 },
@@ -13,7 +12,6 @@ export const menuItems = [
     { id: 11, name: 'بڑا سلاد', category: 'other', price: 100 },
     { id: 12, name: 'رائتہ', category: 'other', price: 80 },
 ];
-
 export const categories = [
     { id: 'all', name: 'All' },
     { id: 'karahi', name: 'Karahi' },
@@ -22,7 +20,6 @@ export const categories = [
     { id: 'drinks', name: 'Drinks' },
     { id: 'other', name: 'Other' },
 ];
-
 export const tables = [
     ...Array.from({ length: 12 }, (_, i) => ({ id: `Indoor ${i + 1}`, name: `Indoor ${i + 1}`, type: 'Indoor' })),
     ...Array.from({ length: 6 }, (_, i) => ({ id: `Takeaway ${i + 1}`, name: `Takeaway ${i + 1}`, type: 'Takeaway' })),
