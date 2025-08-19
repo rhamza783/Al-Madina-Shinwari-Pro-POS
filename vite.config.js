@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import { VitePWA } from 'vite-plugin-pwa';
+import { VitePWA } from '@vite-pwa/plugin';
 
 export default defineConfig({
   plugins: [
@@ -11,7 +11,7 @@ export default defineConfig({
       manifest: {
         name: 'Al-Madina Shinwari POS',
         short_name: 'POS',
-        description: 'Fast, offline-capable POS for Al-Madina Restaurant',
+        description: 'Offline-ready POS for Al-Madina Restaurant',
         theme_color: '#2c3e50',
         background_color: '#ffffff',
         display: 'standalone',
@@ -28,13 +28,8 @@ export default defineConfig({
           }
         ]
       },
-      // Add dev options
       devOptions: {
         enabled: true
-      },
-      // Add workbox options to avoid warnings
-      workbox: {
-        globPatterns: ['**/*.{js,css,html,png,jpg,svg}']
       }
     })
   ],
